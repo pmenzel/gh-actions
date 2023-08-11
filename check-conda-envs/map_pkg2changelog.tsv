@@ -50,4 +50,12 @@ srst2	https://github.com/katholt/srst2/releases
 skesa	https://github.com/ncbi/SKESA/releases
 kaiju	https://github.com/bioinformatics-centre/kaiju/releases
 spades	https://github.com/ablab/spades/releases
-abricate	https://github.com/tseemann/abricate/releases
+abricate  https://github.com/tseemann/abricate/releases
+sambamba  https://github.com/biod/sambamba/releases
+qualimap  http://qualimap.conesalab.org/archive.html
+bedtools  https://github.com/arq5x/bedtools2/releases
+samblaster  https://github.com/GregoryFaust/samblaster/releases
+igvtools  https://software.broadinstitute.org/software/igv/ReleaseNotes
+cutadapt  https://cutadapt.readthedocs.io/en/stable/changes.html
+bwa-mem2  https://github.com/bwa-mem2/bwa-mem2/releases
+illumina-interop  https://github.com/Illumina/interop/releases
