@@ -4,10 +4,11 @@ This tool is used for parsing [conda environment definitions](https://conda.io/p
 It can be run as a job in a GitHub Actions workflow. The result of the job is shown in the workflow summary of the GitHub action.
 URLs pointing to changelogs of various programs are curated in [map_pkg2changelog.tsv](map_pkg2changelog.tsv) and are used in the output tables.
 
-It also enforces the use of exact version numbers in package definitions, for example:
+It also enforces the use of version numbers denoting compatible releases in package definitions, for example:
 ```
   - bioconda::snakemake=6.15.5   # allowed
   - bioconda::snakemake==6.15.5  # allowed
+  - bioconda::snakemake~=6.15.5  # allowed
   - bioconda::snakemake>=6.15.5  # NOT allowed
 ```
 Invalid definition lines will cause the job/workflow to fail.

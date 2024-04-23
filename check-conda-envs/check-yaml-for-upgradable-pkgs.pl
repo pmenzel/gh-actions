@@ -84,15 +84,15 @@ while(<$fh>){
 	if($skip and /^(\s+)-/) { if(length($1) == $indent) { $skip = 0; } else { next; } }
 
 	my ($channel, $pkg, $ver, $search_string);
-	if(/-\s+([0-9a-zA-Z\-_]+)::([0-9a-zA-Z\-_.]+)==?([0-9.\-_a-zA-Z]+)/) { # any appended "=build_id" will be ignored here
+	if(/-\s+([0-9a-zA-Z\-_]+)::([0-9a-zA-Z\-_.]+)(=|==|~=)([0-9.\-_a-zA-Z]+)/) { # any appended "=build_id" will be ignored here
 		$channel = $1;
 		$pkg = $2;
-		$ver = $3;
+		$ver = $4;
 		$search_string = "$channel" . "::" . $pkg . ">" .$ver;
 	}
-	elsif(/-\s+([0-9a-zA-Z\-_.]+)==?([0-9.\-_a-zA-Z]+)/) { # any appended "=build_id" will be ignored here
+	elsif(/-\s+([0-9a-zA-Z\-_.]+)(=|==|~=)([0-9.\-_a-zA-Z]+)/) { # any appended "=build_id" will be ignored here
 		$pkg = $1;
-		$ver = $2;
+		$ver = $3;
 		$search_string = "$pkg>$ver";
 	}
 	else {
